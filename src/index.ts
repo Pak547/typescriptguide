@@ -16,5 +16,14 @@ let user: [number, string] = [1, "Pak"];
 // restrict tuple to 2 elements
 // using push method allows you to store more than 2 elements in tuple but is weird in typescript
 
+// const small = 1;
+// const medium = 2;
+// const large = 3;
+// Pascal case for enum
+const enum Size { Small = 0, Medium, Large = 2 };
+// enum Size { Small = 'small', Medium = 'medium', Large = 'large' };
+let mySize = Size.Medium;
+console.log(mySize);
+
 
 

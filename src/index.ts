@@ -40,11 +40,16 @@ calculateTax(10_000, 2022);
 
 
 // object in type
-let employee: {
+
+//type alias
+// benefit of type alias is that you can reuse it polymorphically
+type Employee = {
     readonly id: number
     name?: string
     retire: (date: Date) => void
-} = {
+}
+
+let employee: Employee = {
     id: 1,
     name: "",
     retire: (date: Date) => console.log(date)

@@ -25,5 +25,15 @@ const enum Size { Small = 0, Medium, Large = 2 };
 let mySize = Size.Medium;
 console.log(mySize);
 
-
-
+// parameter type and return type
+// annotate function with return type
+function calculateTax(income: number, taxYear= 2022): number {
+    if (income < 10_000)
+        return income * 1.2;
+    return income * 1.3; // return type is inferred
+}
+// ? makes optional parameter
+// enable nounusedparameters in tsconfig.json
+// enable noUnusedLocals in tsconfig.json
+// enable noImplicitReturns in tsconfig.json
+calculateTax(10_000, 2022);

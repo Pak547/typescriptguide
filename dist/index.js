@@ -1,4 +1,5 @@
 "use strict";
 let age = 20;
-let club = "Real Madrid";
-const isFamous = false;
+if (age < 50)
+    age += 10;
+//# sourceMappingURL=index.js.map

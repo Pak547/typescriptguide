@@ -89,3 +89,13 @@ let textBox: UIWidget = {
     drag: () => {},
     resize: () => {}
 };
+
+//literaly types
+// literal (exact speciffic value)
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metric = 'cm' | 'inch';
+
+//nullable types
+// very strict of null and undefined values

@@ -59,3 +59,33 @@ employee.name = "Pak";
 // ? makes name optional
 
 
+// union type
+// using this you can have multiple types for a variable which is not possible in other languages
+function kgToLbs(weight: number | string ): number {
+    //Narrowing to narrow down union type
+    if (typeof weight === "number")
+    return weight * 2.2;
+    else
+    return parseFloat(weight) * 2.2;
+}
+
+kgToLbs(10);
+kgToLbs("10kg");
+
+
+// type intersection
+// combining multiple types
+type Draggable = {
+    drag: () => void
+};
+
+type Resizable = {
+    resize: () => void
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+    drag: () => {},
+    resize: () => {}
+};

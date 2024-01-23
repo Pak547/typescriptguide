@@ -99,3 +99,34 @@ type Metric = 'cm' | 'inch';
 
 //nullable types
 // very strict of null and undefined values
+function greet(name: string | null | undefined) {
+    if (name)
+    console.log(`Hello ${name.toUpperCase()}`);
+    else
+    console.log("Hola");
+}
+
+greet(undefined);
+
+// optional chaining
+type Customer = {
+    birthday?: Date
+};
+
+function getCustomer(id: number): Customer | null {
+    return id === 0 ? null : { birthday: new Date() };
+}
+
+let customer = getCustomer(0);
+// if(customer !== null && customer !== undefined)
+// optional property access operator does same thing as above
+console.log(customer?.birthday?.getFullYear());
+
+// optional element access operator
+// if(customer !== null && customer !== undefined)
+// customers?.[0]
+
+// if customer is null, it will return undefined
+//optional call
+let log: any = null;
+log?.('a')
